@@ -1,0 +1,20 @@
+
+
+body{
+    font-family: 'GT-America','SangBleuSunrise',sans-serif;
+}
+body.hidden{overflow: hidden;}
+
+
+
+
+
+
+.blind{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}

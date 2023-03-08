@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'GT-America';
+    font-weight: 300;
+    src: url(../font/GT-America-Standard-Light.woff2);
+}
+@font-face {
+    font-family: 'GT-America';
+    font-weight: 400;
+    src: url(../font/GT-America-Standard-Regular.woff2);
+}
+@font-face {
+    font-family: 'GT-America';
+    font-weight: 500;
+    src: url(../font/GT-America-Standard-Medium.woff2);
+}
+
+@font-face {
+    font-family: 'SangBleuSunrise';
+    font-weight: 400;
+    src: url(../font/SangBleuSunrise-Regular-WebS.woff2);
+}
+@font-face {
+    font-family: 'SangBleuSunrise';
+    font-weight: 500;
+    src: url(../font/SangBleuSunrise-RegularItalic-WebS.woff2);
+}
