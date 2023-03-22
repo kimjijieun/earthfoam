@@ -18,3 +18,12 @@ body.hidden{overflow: hidden;}
     position: absolute;
     clip: rect(0, 0, 0, 0);
 }
+
+.inner{padding: 0 60px;}
+.footer{
+    margin-left: 80px;
+    overflow: hidden;
+    background-color: #141617;
+    color: #fff;
+}
+/* section{margin-left: 80px;} */
