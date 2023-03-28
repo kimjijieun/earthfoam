@@ -18,7 +18,7 @@ $(function(){
     //     console.log(i);
     // }, 200);
 
-    i = $('.slide-area .slide-img').length
+    i = $('.slide-area .slide-img').length;
     let slide = gsap.timeline({
         repeat:-1, //무한
         delay:1.5,
@@ -26,7 +26,9 @@ $(function(){
 
     })
 
+
     slide
+    .addLabel('a')
     .to('.slide-area .img1',{
         delay:5,
         opacity:1,
@@ -47,6 +49,118 @@ $(function(){
         opacity:1,
         translateX:50,
     })
+
+    // btn-menu
+
+    $('.btn-menu').click(function(){
+        $('.btn-menu, .header .menu-area, .container').toggleClass('active');
+
+        $(window).resize(function(){ 
+            if (window.innerWidth < 767) {  // 다바이스 크기가 480이상일때 
+                // $('.header .menu-side').toggleClass('active');
+                
+                if ($('.btn-menu').hasClass('active') ) {
+                    $('.header .menu-area, .container').removeClass('active');
+                    $('.header .menu-side').addClass('active')
+                } else {
+                    $('.header .menu-area, .container').removeClass('active');
+                    $('.header .menu-side').removeClass('active')
+                }
+            }
+            
+            }).resize(); 
+
+        $('body').toggleClass('hidden');
+    })
+
+    // btn-more
+
+    $('.btn-more').hover(function(){
+        $('.sc-story .info-box').toggleClass('open')
+        // $('.sc-story .info-box').animate({
+        //     width: '300px',
+        //     opacity: '1'
+        // },300)
+    })
+    
+    // more버튼 바뀌기
+    $(window).scroll(function(){
+        curr = $(this).scrollTop();
+        // storyHeight = $('.sc-story').outerHeight();
+        storyHeight = $('.sc-story').offset().top;
+
+        if (curr > storyHeight ) {
+            $('.sc-story .info-box, .btn-more').removeClass('show');
+        } else {
+            $('.sc-story .info-box, .btn-more').addClass('show');
+        }
+
+        $(window).resize(function(){ 
+            if (window.innerWidth < 1023) {  // 다바이스 크기가 480이상일때 
+            
+            if (curr > storyHeight ) {
+                $('.sc-story .info-box, .btn-more').addClass('show');
+            }
+        }
+            
+            }).resize(); 
+    })
+
+
+    const up = gsap.utils.toArray('.up');
+    up.forEach((up) => {
+        gsap.fromTo(up,{
+            y: 20,
+            opacity: 0
+        },{
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: up,
+                start: 'top+=30% 70%',
+                end: 'bottom top',
+                // markers: true,
+            },
+        })
+    })
+
+//     const reveal = gsap.utils.toArray('.reveal');
+    //   reveal.forEach((text,i)=>{
+    //     ScrollTrigger.create({
+    //      trigger:text,
+    //      toggleClass:'active',
+    //      start:"top 90%",
+    //      end:"top 20%",
+    //      markers:true,
+    //      scrub:true
+    //   });
+    // });
+
+    gsap.from('.sleep-wrap .item-up',{
+        y: 20,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: '.sleep-wrap',
+            start: 'top 70%',
+            end: 'bottom top',
+            stagger:0.1,
+            // markers: true,
+        },
+    })
+
+    gsap.from('.benefits-list .benefits-item',{
+        y: 20,
+        opacity: 0,
+        stagger:0.2,
+        scrollTrigger: {
+            trigger: '.benefits-list .benefits-item',
+            start: 'top bottom',
+            end: 'bottom top',
+            stagger:0.1,
+            // markers: true,
+        },
+    })
+
 
 
 
@@ -77,7 +191,7 @@ $(function(){
         if ($(this).siblings('.test-info').css('display') == 'none') {
             $('.test-info').stop().slideUp();
             $(this).siblings('.test-info').stop().slideDown();
-            
+
         } else {
             $('.test-info').stop().slideUp();
         }
@@ -86,7 +200,15 @@ $(function(){
     
 
 
+    $(window).resize(function(){     
 
+        if ($('.sc-story .info-menu').width() == 1023 ){
+ 
+            $('.sc-story .info-box, .btn-more').removeClass('show');
+ 
+        }
+ 
+ });
 
 
 

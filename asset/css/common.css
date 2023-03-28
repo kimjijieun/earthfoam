@@ -20,6 +20,13 @@ body.hidden{overflow: hidden;}
 }
 
 .inner{padding: 0 60px;}
+.desc-title{
+    line-height: 150%;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    font-family: 'SangBleuSunrise';
+}
+.margin{margin: 200px 0;}
 .footer{
     margin-left: 80px;
     overflow: hidden;
@@ -27,3 +34,18 @@ body.hidden{overflow: hidden;}
     color: #fff;
 }
 /* section{margin-left: 80px;} */
+
+@media screen and (max-width: 1200px) {
+    /* *1024을 기준으로 화면을 보고 잡아야함 */ 
+
+}
+@media screen and (max-width: 1023px) {
+    /* *768을보고 잡아야함 */
+    .margin{margin: 100px 0;}
+}
+@media screen and (max-width: 767px) {
+    /* *320을 보고 잡아야함 */
+    .margin{margin: 60px 0;}
+    .common-inner{padding: 0 20px;}
+    .footer{margin-left: 0;}
+}
