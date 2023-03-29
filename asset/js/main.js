@@ -244,9 +244,38 @@ $(function(){
  
         }
  
- });
+    });
 
 
+    // 커서
+
+    $('body').mousemove(function(e){
+        xVal = e.clientX;
+        yVal = e.clientY;
+// console.log(xVal+'//'+yVal);
+        gsap.to('.cursor',{
+            x:xVal,
+            y:yVal
+        })
+        
+    })
+
+
+    $('.sc-mattres .mattres-list .mattres-box').mouseover(function(){
+
+        gsap.to('.cursor',{
+            opacity:1,
+            visibility: 'visible'
+        })
+
+    })
+    $('.sc-mattres .mattres-list .mattres-box').mouseleave(function(){
+
+        gsap.to('.cursor',{
+            opacity:0,
+            visibility: 'hidden'
+        })
+    })
 
 
 })

@@ -35,6 +35,28 @@ body.hidden{overflow: hidden;}
 }
 /* section{margin-left: 80px;} */
 
+.cursor{
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    pointer-events: none; 
+
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cursor::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #141617;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 @media screen and (max-width: 1200px) {
     /* *1024을 기준으로 화면을 보고 잡아야함 */ 
 
