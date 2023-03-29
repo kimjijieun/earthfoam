@@ -185,7 +185,7 @@
     width: 100%;
     color: #fff;
 }
-.footer .footer-wrap .search-area .search-box .btn-search{}
+.footer .footer-wrap .search-area .search-box .btn-search{cursor: pointer;}
 .footer .footer-wrap .search-area .search-box .ic-search{
     padding: 12px;
     color: #fff;

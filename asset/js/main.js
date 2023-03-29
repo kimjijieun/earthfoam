@@ -18,37 +18,73 @@ $(function(){
     //     console.log(i);
     // }, 200);
 
+
+    // idx = 0;
+    // setInterval(() => {
+    //     $('.slide-area').html(i[idx])
+    //     idx++;
+    //     console.log(idx);
+    // }, 200);
+
+
+
+    $(window).resize(function(){
+        if (window.innerWidth < 767) {
+            gsap.to('.sc-mainslide .slide-area .svg-wrap',{
+                opacity:0,
+                visibility: 'hidden'
+            })
+            // $('.slide-area .svg-wrap').animate({opacity:'0'}, 500);
+
+            // gsap.to('.sc-mainslide .slide-area .svg-wrap',{
+            //     opacity:0,
+            //     visibility: 'hidden'
+            // })
+        }
+    })
+
     i = $('.slide-area .slide-img').length;
     let slide = gsap.timeline({
         repeat:-1, //무한
-        delay:1.5,
+        // delay:1.2,
+        repeatDelay: 2, //애니메이션 동작 후 s초 이따가 동작
         // translateX:-50,
 
     })
 
-
     slide
     .addLabel('a')
+    // .fromTo('.slide-area .img-box',{
+    //     opacity:0,
+    //     },{
+    //     delay:0.5,
+    //     opacity:1
+    // })
     .to('.slide-area .img1',{
-        delay:5,
+        delay:6,
         opacity:1,
         translateX:50,
     })
     .to('.slide-area .img2',{
-        delay:5,
+        delay:6,
         opacity:1,
         translateX:50,
     })
     .to('.slide-area .img3',{
-        delay:5,
+        delay:6,
         opacity:1,
         translateX:50,
     })
     .to('.slide-area .img4',{
-        delay:5,
+        delay:6,
         opacity:1,
         translateX:50,
     })
+
+
+
+
+
 
     // btn-menu
 
