@@ -61,22 +61,22 @@ $(function(){
     //     opacity:1
     // })
     .to('.slide-area .img1',{
-        delay:6,
+        delay:5,
         opacity:1,
         translateX:50,
     })
     .to('.slide-area .img2',{
-        delay:6,
+        delay:5,
         opacity:1,
         translateX:50,
     })
     .to('.slide-area .img3',{
-        delay:6,
+        delay:5,
         opacity:1,
         translateX:50,
     })
     .to('.slide-area .img4',{
-        delay:6,
+        delay:5,
         opacity:1,
         translateX:50,
     })
@@ -89,7 +89,7 @@ $(function(){
     // btn-menu
 
     $('.btn-menu').click(function(){
-        $('.btn-menu, .header .menu-area, .container').toggleClass('active');
+        $('.btn-menu, .header .menu-area, .container, .footer').toggleClass('active');
 
         $(window).resize(function(){ 
             if (window.innerWidth < 767) {  // 다바이스 크기가 480이상일때 
@@ -211,6 +211,7 @@ $(function(){
             disableOnInteraction: false,
         },
         loop: true,
+        // loopedSlides: 1
         // speed: 800,
 
     });
