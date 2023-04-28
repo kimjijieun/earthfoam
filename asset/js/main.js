@@ -2,30 +2,24 @@ $(function(){
 
 // 메인슬라이드
 
-    var mainSlide = new Swiper(".sc-mainSlide", {
-        autoplay: {
-            delay: 1500,
-        },
+    var mainSlide = new Swiper(".sc-mainslide", {
+        effect:'fade',
+        speed : 1000,
         loop: true,
-        // resistance : false,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+          },
     });
+    mainSlide.autoplay.stop();
 
-
-    // let idx = 0;
-    // i = $('.slide-area .slide-img').length
-    // setInterval(() => {
-    //     opacity:1,
-    //     console.log(i);
-    // }, 200);
-
-
-    // idx = 0;
-    // setInterval(() => {
-    //     $('.slide-area').html(i[idx])
-    //     idx++;
-    //     console.log(idx);
-    // }, 200);
-
+    gsap.to('.sc-mainslide .svg-box',{
+        delay:1.5,
+        background:'transparent',
+        onComplete:function(){
+            mainSlide.autoplay.start();
+        }
+    })
 
 
     $(window).resize(function(){
@@ -34,52 +28,9 @@ $(function(){
                 opacity:0,
                 visibility: 'hidden'
             })
-            // $('.slide-area .svg-wrap').animate({opacity:'0'}, 500);
-
-            // gsap.to('.sc-mainslide .slide-area .svg-wrap',{
-            //     opacity:0,
-            //     visibility: 'hidden'
-            // })
         }
     })
 
-    i = $('.slide-area .slide-img').length;
-    let slide = gsap.timeline({
-        repeat:-1, //무한
-        // delay:1.2,
-        repeatDelay: 2, //애니메이션 동작 후 s초 이따가 동작
-        // translateX:-50,
-
-    })
-
-    slide
-    .addLabel('a')
-    // .fromTo('.slide-area .img-box',{
-    //     opacity:0,
-    //     },{
-    //     delay:0.5,
-    //     opacity:1
-    // })
-    .to('.slide-area .img1',{
-        delay:5,
-        opacity:1,
-        translateX:50,
-    })
-    .to('.slide-area .img2',{
-        delay:5,
-        opacity:1,
-        translateX:50,
-    })
-    .to('.slide-area .img3',{
-        delay:5,
-        opacity:1,
-        translateX:50,
-    })
-    .to('.slide-area .img4',{
-        delay:5,
-        opacity:1,
-        translateX:50,
-    })
 
 
 
@@ -111,12 +62,10 @@ $(function(){
 
     // btn-more
 
-    $('.btn-more').hover(function(){
-        $('.sc-story .info-box').toggleClass('open')
-        // $('.sc-story .info-box').animate({
-        //     width: '300px',
-        //     opacity: '1'
-        // },300)
+    $('.info-menu').hover(function(){
+        $('.sc-story .info-box').addClass('open');
+    },function(){
+        $('.sc-story .info-box').removeClass('open');
     })
     
     // more버튼 바뀌기
@@ -160,17 +109,6 @@ $(function(){
         })
     })
 
-//     const reveal = gsap.utils.toArray('.reveal');
-    //   reveal.forEach((text,i)=>{
-    //     ScrollTrigger.create({
-    //      trigger:text,
-    //      toggleClass:'active',
-    //      start:"top 90%",
-    //      end:"top 20%",
-    //      markers:true,
-    //      scrub:true
-    //   });
-    // });
 
     gsap.from('.sleep-wrap .item-up',{
         y: 20,
@@ -201,7 +139,7 @@ $(function(){
 
 
     // sc-slide
-    var swiper = new Swiper('.sc-slide .slide-swiper', {
+    var slide2 = new Swiper('.sc-slide .slide-swiper', {
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -217,7 +155,7 @@ $(function(){
     });
     // 호버
     $('.swiper-pagination-bullet').hover(function() {
-        $( this ).trigger( "click" );
+        slide2.slideToLoop($(this).index());
      });
 
 

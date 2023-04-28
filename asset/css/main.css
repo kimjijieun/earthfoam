@@ -13,50 +13,44 @@
     /* padding-left: 80px; */
 }
 
-.sc-mainSlide .swiper-slide{
-    /* position: relative; */
-    /* overflow: hidden; */
-}
+.sc-mainSlide .swiper-slide{}
 .sc-mainSlide .swiper-slide .img-box{
     overflow: hidden;
 }
 .sc-mainSlide .swiper-slide .slide-img{
-    /* animation: right 3s linear forwards infinite; */
     width: 100%;height: 100%;
-    /* transition: opacity 1.25s linear 0s, transform 13s linear 0s;
-    transform: scale(1.1) translateX(2.5vw); */
 }
 
 .top-ani{display: none;}
 
 
-.sc-mainslide{background: #141617;position: relative;}
-.sc-mainslide .slide-area{
+.sc-mainslide{
+    background: #141617;
     position: relative;
-    /* margin-left: 80px; */
-}
-.sc-mainslide .slide-area .img-box{
     height: 100vh;
     min-height: 850px;
     max-height: 1200px;
-    position: relative;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    margin-left: -80px;
 }
 
-.sc-mainslide .slide-area .slide-img{
-    width: 100%;height: 100%;
+.sc-mainslide .swiper{
+    height: 100%;
+}
+.sc-mainslide .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
     transition: opacity 1.25s linear 0s, transform 13s linear 0s;
-    /* transform: scale(1.1) translateX(2.5vw); */
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+    transform: scale(1.1) translateX(0);
+}
+.sc-mainslide .swiper-wrapper .swiper-slide-active img{
+    transition: opacity 1.25s linear 0s, transform 13s linear 0s;
+    transform: scale(1.1) translateX(2.5vw);
 }
 
-.sc-mainslide .slide-area .svg-box{
+
+.sc-mainslide .svg-box{
+    background: #141617;
     position: absolute;
     top: 0;
     left: 0;
@@ -66,9 +60,10 @@
     width: 100%;
     box-sizing: border-box;
     justify-content: center;
+    z-index: 9;
 }
-.sc-mainslide .slide-area .svg-box .svg{}
-.sc-mainslide .slide-area .svg-box #mask_main{
+.sc-mainslide .svg-box .svg{}
+.sc-mainslide .svg-box #mask_main{
     animation-name: mask-main;
     animation-duration: 1400ms;
     animation-timing-function: ease-out;
@@ -76,7 +71,7 @@
     stroke-dasharray: 4470;
     animation-fill-mode: both;
 }
-.sc-mainslide .slide-area .svg-box #mask_e{
+.sc-mainslide .svg-box #mask_e{
     animation-name: mask-e;
     animation-duration: 80ms;
     animation-timing-function: ease-in-out;
@@ -84,7 +79,7 @@
     stroke-dasharray: 685;
     animation-fill-mode: both;
 }
-.sc-mainslide .slide-area .svg-box #mask_cross {
+.sc-mainslide .svg-box #mask_cross {
     animation-name: mask-cross;
     animation-duration: 80ms;
     animation-timing-function: ease-in-out;
@@ -239,6 +234,7 @@
     display: flex;
     opacity: 0;
     gap: 5px;
+    z-index: 9;
 }
 
 .sc-story .info-menu .info-box .btn-info:first-child{margin-left: 5px;}
