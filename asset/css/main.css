@@ -13,6 +13,7 @@
     /* padding-left: 80px; */
 }
 
+.slide-wrap{position: relative;}
 .sc-mainSlide .swiper-slide{}
 .sc-mainSlide .swiper-slide .img-box{
     overflow: hidden;
@@ -113,7 +114,7 @@
     }
 }
 
-.sc-mainslide .story-info{
+.story-info{
     position: absolute;
     left: 50%;
     bottom: 40px;
@@ -128,15 +129,15 @@
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.sc-mainslide .story-info .info-top{
+.story-info .info-top{
     line-height: 150%;
     letter-spacing: -0.025em;
     font-size: 30px;
     margin: 0 48px 20px;
     font-family: 'SangBleuSunrise';
 }
-.sc-mainslide .story-info .info-top .span{}
-.sc-mainslide .story-info .info-top .span>i{
+.story-info .info-top .span{}
+.story-info .info-top .span>i{
     font-style: italic;
     display: inline-block;
     animation-name: wave;
@@ -145,12 +146,12 @@
     padding: 5px;
     margin: -5px;
 }
-.sc-mainslide .story-info .info-top i:nth-child(1){animation-delay: 1075ms;}
-.sc-mainslide .story-info .info-top i:nth-child(2){animation-delay: 1150ms;}
-.sc-mainslide .story-info .info-top i:nth-child(3){animation-delay: 1225ms;}
-.sc-mainslide .story-info .info-top i:nth-child(4){animation-delay: 1300ms;}
-.sc-mainslide .story-info .info-top i:nth-child(5){animation-delay: 1375ms;}
-.sc-mainslide .story-info .info-top i:nth-child(6){animation-delay: 1450ms;}
+.story-info .info-top i:nth-child(1){animation-delay: 1075ms;}
+.story-info .info-top i:nth-child(2){animation-delay: 1150ms;}
+.story-info .info-top i:nth-child(3){animation-delay: 1225ms;}
+.story-info .info-top i:nth-child(4){animation-delay: 1300ms;}
+.story-info .info-top i:nth-child(5){animation-delay: 1375ms;}
+.story-info .info-top i:nth-child(6){animation-delay: 1450ms;}
 
 @keyframes wave {
     0% {
@@ -167,7 +168,7 @@
     }
 }
 
-.sc-mainslide .story-info .info-bottom{
+.story-info .info-bottom{
     letter-spacing: 0.1em;
     font-size: 10px;
     line-height: 110%;
@@ -214,16 +215,10 @@
     top: 20px;
     right: 20px;
 
-    width: 300px;
     height: 38px;
-    overflow: hidden;
     z-index: 9;
-
-    /* display: flex;
-    align-items: center;
-    overflow: hidden; */
 }
-.sc-story .info-menu .info-box{
+.info-box{
     /* width: 300px; */
     width: 0;
     transition: width 0.5s ease, opacity 0.2s linear;
@@ -235,10 +230,11 @@
     opacity: 0;
     gap: 5px;
     z-index: 9;
+    overflow: hidden;
 }
 
-.sc-story .info-menu .info-box .btn-info:first-child{margin-left: 5px;}
-.sc-story .info-menu .info-box .btn-info{
+.info-box .btn-info:first-child{margin-left: 5px;}
+.info-box .btn-info{
     padding: 12px 24px;
     background-color: #141617;
     color: #FFFFFF;
@@ -251,11 +247,11 @@
     box-sizing: border-box;
     display: inline-block;
 }
-.sc-story .info-menu .info-box .btn-info:hover{
+.info-box .btn-info:hover{
     background-color: #EA805C;
 }
 
-.sc-story .info-menu .btn-more{
+.btn-more{
     display: inline-block;
     position: absolute;
     right: 0;
@@ -263,7 +259,7 @@
     /* opacity: 0; */
     transition: opacity 0.3s;
 }
-.sc-story .info-menu .btn-more a{
+.btn-more a{
     padding: 12px;
     line-height: 0.4;
     width: 38px;
@@ -276,7 +272,7 @@
     box-sizing: border-box;
     text-align: center;
 }
-.sc-story .info-menu .btn-more svg{
+.btn-more svg{
     width: 14px;
     display: inline-block;
 }
@@ -554,13 +550,21 @@
 
 /* .sc-sleep{margin-bottom: 100px;} */
 .sc-sleep .sleep-area{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 100px;
+    min-height: 100vh;
+    max-height: 800px;
 }
 .sc-sleep .sleep-area .sleep-wrap{
-    margin-top: 100px;
-    padding: 0 106px;
+    padding: 0 16%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 .sc-sleep .sleep-area .sleep-wrap .sc-title{
     margin-bottom: 20px;
@@ -605,7 +609,7 @@
 
 .sc-sleep .sleep-area .sleep-box{}
 .sc-sleep .sleep-area .sleep-box .img-box{
-    width: 625px;
+    width: 100%;
     height: 100%;
 }
 .sc-sleep .sleep-area .sleep-box .img-box img{
@@ -616,9 +620,12 @@
 }
 
 .sc-sleep .sleep-area2{
-    margin-right: 215px;
-    margin-left: auto;
-    width: 410px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.sc-sleep .sleep-area2 .sleep-box2{
+    grid-column-start: 2;
+    padding-right: 35%;
 }
 .sc-sleep .sleep-area2 .subtitle{
     margin-bottom: 48px;
@@ -894,11 +901,36 @@
         height: 50vh;
         min-height: 400px;
     }
+    .sc-mainslide{
+        height: 50vh;
+        min-height: 400px;
+    }
 
     .animate-list{
         padding: 20px 0;
         user-select: none;
     }
+
+    .story-info{
+        position: relative;
+        color: #000;
+        bottom: 0;
+    }
+    .story-info .info-box.m-story{
+        position: relative;
+        padding: 0 20px;
+        margin: 0 32px 32px;
+
+        opacity: 1;
+        justify-content: center;
+        width: auto;
+    }
+    .info-box .btn-info{
+        padding: 20px 40px;
+        flex: 1;
+    }
+
+
     .sc-story .story-wrap.animate{display: none;}
 
     .sc-mainslide .slide-area{background: #141617;}
@@ -913,6 +945,8 @@
     }
 
     .sc-story .info-menu{
+        display: none;
+
         position: relative;
         top: 0;
         right: 0;
@@ -974,7 +1008,11 @@
     }
     .sc-slide .slide-swiper .swiper-pagination{width: 524px;bottom: 40px;}
 
-    .sc-sleep .sleep-area{flex-direction: column-reverse;    max-height: initial;}
+    .sc-sleep .sleep-area{
+        flex-direction: column-reverse;
+        max-height: initial;
+        display: flex;
+    }
     .sc-sleep .sleep-area .sleep-box .img-box{
         width: 100%;
         height: 426px;
@@ -991,12 +1029,12 @@
     }
 
     .sc-sleep .sleep-area2{
-        width: 550px;
-        /* padding: 0 20px; */
-        margin-left: 72px;
-        margin-right: 0;
-        box-sizing: border-box;
+        display: flex;
+        width: auto;
+        padding: 0 77px;
+        margin-right:0;
     }
+    .sc-sleep .sleep-area2 .sleep-box2{padding-right: 0;}
 
     .adver-area{height: 447px;}
     .adver-area .ad-wrap{left: 20px;}
@@ -1041,6 +1079,10 @@
         z-index: 9;
     }
     
+    .story-info .info-box.m-story{overflow: initial;}
+    .info-box .btn-info{padding: 12px 24px;}
+
+
     .sc-story{top: -77px;}
     .sc-story .info-menu{
         left: 0;
@@ -1197,6 +1239,7 @@
         margin: 0;
         padding: 0 20px;
         width: 100%;
+        box-sizing: border-box;
     }
     .sc-sleep .sleep-area2 .subtitle{
         font-size: 28px;

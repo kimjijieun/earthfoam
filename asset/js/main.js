@@ -14,7 +14,7 @@ $(function(){
     mainSlide.autoplay.stop();
 
     gsap.to('.sc-mainslide .svg-box',{
-        delay:1.5,
+        delay:2.4,
         background:'transparent',
         onComplete:function(){
             mainSlide.autoplay.start();
