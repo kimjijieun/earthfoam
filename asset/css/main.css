@@ -61,7 +61,7 @@
     width: 100%;
     box-sizing: border-box;
     justify-content: center;
-    z-index: 9;
+    z-index: 99;
 }
 .sc-mainslide .svg-box .svg{}
 .sc-mainslide .svg-box #mask_main{
@@ -179,6 +179,7 @@
 .sc-story .story-wrap.animate{
     overflow: hidden;
     border-bottom: 1px solid #DDDDDD;
+    display: flex;
 }
 .animate-list{
     letter-spacing: 0.1em;
@@ -195,7 +196,7 @@
     animation-name: animate;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-duration: 25.5s;
+    animation-duration: 35.5s;
 }
 .animate-item{
     padding: 0 32px;
@@ -896,7 +897,8 @@
 }
 @media screen and (max-width: 1023px) {
     /* *768을보고 잡아야함 */
-    .top-ani{display: block;}
+    .top-ani{display: flex;}
+    .top-ani .animate-list{animation-duration: 65.5s;}
     .sc-mainslide .slide-area .img-box{
         height: 50vh;
         min-height: 400px;
@@ -1067,6 +1069,8 @@
     .sc-mainslide{background: #f8f7ed;}
     .sc-mainslide .story-info .info-top{font-size: 24px;}
 
+    /* .sc-mainslide .svg-box{display: none;} */
+    
     .sc-mainslide .slide-area .svg-wrap{
         width: 100%;
         opacity: 1;
@@ -1079,7 +1083,8 @@
         z-index: 9;
     }
     
-    .story-info .info-box.m-story{overflow: initial;}
+    .story-info .info-top{font-size: 24px;}
+    .story-info .info-box.m-story{overflow: initial;    margin: 0 0 32px;}
     .info-box .btn-info{padding: 12px 24px;}
 
 
@@ -1190,7 +1195,7 @@
         opacity: 1;
         transition: opacity 0.8s;
     }
-
+    .story-info{z-index: 0;}
     /* .sc-slide .pagination-box{
         display: flex;
         flex-direction: row;
@@ -1227,7 +1232,7 @@
 
     .sc-sleep .sleep-area .sleep-box .img-box{height: 467px;}
     .sc-sleep .common-inner{padding: 0;}
-    .sc-sleep .sleep-area .sleep-wrap{padding: 0 20px;}
+    .sc-sleep .sleep-area .sleep-wrap{padding: 0 20px;align-items: center;}
     .sc-sleep .sleep-area .sleep-wrap em{
         font-size: 32px;
         margin-bottom: 20px;
@@ -1249,7 +1254,10 @@
     .sc-sleep .sleep-area2 .subtitle br{display: none;}
     .adver-area{
         margin-top: 32px;
-        height: 213px;
+        height: 321px;
+
+        background: url(../images/contents/211103_SG_Earthfoam_Shot11_Asia_00335_3274SG_B_ADOBERGB_640x.webp) no-repeat center;
+        background-size: 100%;
     }
     .adver-area .ad-wrap{
         position: relative;
@@ -1258,6 +1266,10 @@
         text-align: center;
         color: #3A3A3A;
         padding: 0 10px;
+        width: 70%;
+        margin: 0 auto;
+
+        box-sizing: border-box;
     }
     .adver-area .ad-title{
         margin-bottom: 12px;

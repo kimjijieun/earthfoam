@@ -13,7 +13,8 @@ $(function(){
     });
     mainSlide.autoplay.stop();
 
-    gsap.to('.sc-mainslide .svg-box',{
+
+    gsap.to('.svg-box',{
         delay:2.4,
         background:'transparent',
         onComplete:function(){
@@ -21,15 +22,34 @@ $(function(){
         }
     })
 
-
-    $(window).resize(function(){
-        if (window.innerWidth < 767) {
-            gsap.to('.sc-mainslide .slide-area .svg-wrap',{
-                opacity:0,
-                visibility: 'hidden'
-            })
+    gsap.to('.dimmed',{
+        delay:2.4,
+        opacity:0,
+        display:'none',
+        background:'transparent',
+        onComplete:function(){
+            mainSlide.autoplay.start();
         }
     })
+    // $(window).resize(function(){
+    //     if (window.innerWidth < 767) {
+    //         if ($('.dimmed').css('display', 'block')) {
+    //             gsap.to('.dimmed, .aa',{
+    //                 delay:2.4,
+    //                 opacity:0,
+    //                 display:'none',
+    //                 background:'transparent',
+    //                 onComplete:function(){
+    //                     mainSlide.autoplay.start();
+    //                 }
+    //             })
+    //         }
+    //      }
+    // })
+
+
+
+
 
 
 
