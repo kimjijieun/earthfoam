@@ -123,8 +123,6 @@
     margin-top: 32px;
     text-align: center;
     z-index: 6;
-    /* animation-name: home-hero-description-reveal; */
-    /* animation-play-state: paused; */
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -279,17 +277,9 @@
 }
 
 /* 제이쿼리 */
-/* .sc-story .info-menu:hover .btn-more{opacity: 0;}
-.sc-story .info-menu:hover .info-box{
-    width: 300px;
-    opacity: 1;
-} */
+
 
 .sc-story .btn-more:hover{opacity: 0;}
-/* .sc-story .btn-more:hover .info-box{
-    width: 300px;
-    opacity: 1;
-} */
 .sc-story .info-box.open{
     width: 300px;
     opacity: 1;
@@ -377,8 +367,6 @@
 
     width: 100%;
     height: auto;
-    /* padding-bottom: 70%; */
-    /* aspect-ratio: 640 / 427; */
 }
 
 .sc-mattres .mattres-list .mattres-item:nth-child(1) .img-box{
@@ -462,7 +450,6 @@
 }
 
 .sc-slide{
-    /* margin-top: 200px; */
     background-color: #F67B71;
 }
 .sc-slide .common-inner{}
@@ -475,19 +462,9 @@
 .sc-slide .slide-swiper .swiper-wrapper{}
 .sc-slide .slide-swiper .swiper-slide{
     opacity: 0;
-    /* transform: translateX(0%); */
     transition: transform 0.8s cubic-bezier(0.65, 0, 0.55, 1) 0s, opacity 0.5s linear 0s;
 }
-/* .sc-slide .slide-swiper .swiper-slide .swiper-slide-prev{
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: transform 0.8s cubic-bezier(0.65, 0, 0.55, 1) 0s, opacity 0.5s linear 0s;
-}
-.sc-slide .slide-swiper .swiper-slide .swiper-slide-next{
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 0.8s cubic-bezier(0.65, 0, 0.55, 1) 0s, opacity 0.5s linear 0s;
-} */
+
 .sc-slide .slide-swiper .swiper-slide-active{
     opacity: 1;
     /* transform: translateX(0); */
@@ -549,10 +526,8 @@
 .sc-slide .slide-swiper .swiper-slide .swiper-img{display: none;}
     
 
-/* .sc-sleep{margin-bottom: 100px;} */
+
 .sc-sleep .sleep-area{
-    /* display: flex;
-    justify-content: space-between; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 100px;

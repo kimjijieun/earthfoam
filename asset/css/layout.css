@@ -430,10 +430,6 @@
         /* width: 320px; */
         height: 60px;
     }
-    /* .header .menu-area.active{
-        transform: translateX(0);
-    } */
-    /* .container.active{transform: translateX(0);} */
     .header .menu-side{
         padding: 16px;
         left: 0;

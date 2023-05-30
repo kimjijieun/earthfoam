@@ -31,21 +31,7 @@ $(function(){
             mainSlide.autoplay.start();
         }
     })
-    // $(window).resize(function(){
-    //     if (window.innerWidth < 767) {
-    //         if ($('.dimmed').css('display', 'block')) {
-    //             gsap.to('.dimmed, .aa',{
-    //                 delay:2.4,
-    //                 opacity:0,
-    //                 display:'none',
-    //                 background:'transparent',
-    //                 onComplete:function(){
-    //                     mainSlide.autoplay.start();
-    //                 }
-    //             })
-    //         }
-    //      }
-    // })
+    
 
 
 
@@ -64,7 +50,6 @@ $(function(){
 
         $(window).resize(function(){ 
             if (window.innerWidth < 767) {  // 다바이스 크기가 480이상일때 
-                // $('.header .menu-side').toggleClass('active');
                 
                 if ($('.btn-menu').hasClass('active') ) {
                     $('.header .menu-area, .container').removeClass('active');
@@ -169,8 +154,6 @@ $(function(){
             disableOnInteraction: false,
         },
         loop: true,
-        // loopedSlides: 1
-        // speed: 800,
 
     });
     // 호버
