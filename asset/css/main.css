@@ -10,7 +10,6 @@
     transition: transform 750ms cubic-bezier(0.22, 1, 0.36, 1), filter 750ms linear;
     transform: translateX(575px);
     pointer-events: none;
-    /* padding-left: 80px; */
 }
 
 .slide-wrap{position: relative;}
@@ -86,7 +85,7 @@
     animation-timing-function: ease-in-out;
     animation-delay: 1730ms;
     stroke-dasharray: 235;
-    animation-fill-mode: both; /*끝난 후의 상태, 앞 뒤 결과를 조합하여 설정 */
+    animation-fill-mode: both;
 }
 
 @keyframes mask-main {
@@ -218,7 +217,6 @@
     z-index: 9;
 }
 .info-box{
-    /* width: 300px; */
     width: 0;
     transition: width 0.5s ease, opacity 0.2s linear;
 
@@ -255,7 +253,6 @@
     position: absolute;
     right: 0;
     z-index: 99;
-    /* opacity: 0; */
     transition: opacity 0.3s;
 }
 .btn-more a{
@@ -276,7 +273,6 @@
     display: inline-block;
 }
 
-/* 제이쿼리 */
 
 
 .sc-story .btn-more:hover{opacity: 0;}
@@ -295,7 +291,6 @@
 }
 
 
-/* .sc-mattres{margin-top: 200px;} */
 .sc-mattres .mattres-desc{
     line-height: 150%;
     letter-spacing: -0.025em;
@@ -336,19 +331,16 @@
     grid-row-start: 1;
     grid-row-end: span 15;
     grid-column-start: 3;
-    /* grid-column-end: span 14; */
     grid-column-end: span 11;
 }
 .sc-mattres .mattres-list .mattres-item:nth-child(2){
     grid-row-start: 7;
-    /* grid-row-start: 8; */
     grid-row-end: span 15;
     grid-column-end: span 8;
     grid-column-start: 15;
 }
 .sc-mattres .mattres-list .mattres-item:nth-child(3){
     grid-row-start: 17;
-    /* grid-row-start: 18; */
     grid-row-end: span 15;
     grid-column-end: span 9;
     grid-column-start: 4;
@@ -356,7 +348,6 @@
 .sc-mattres .mattres-list .mattres-item a{
     display: block;
     width: 100%;
-    /* height: 100%; */
     overflow: hidden;
 }
 .sc-mattres .mattres-list .mattres-item .img-box{
@@ -467,7 +458,6 @@
 
 .sc-slide .slide-swiper .swiper-slide-active{
     opacity: 1;
-    /* transform: translateX(0); */
     transition: transform 0.8s cubic-bezier(0.65, 0, 0.55, 1) 0s, opacity 0.5s linear 0s;
 }
 
@@ -477,7 +467,6 @@
     color: #F8F7ED;
     margin-bottom: 200px;
     width: 58%;
-    /* margin: 0 auto; */
     padding: 0 106px;
     letter-spacing: -0.02em;
 }
@@ -560,7 +549,6 @@
 }
 .sc-sleep .sleep-area .sleep-wrap .desc{
     font-size: 14px;
-    /* margin-bottom: 48px; */
     margin-bottom: 40px;
     line-height: 150%;
     font-weight: 100;
@@ -569,7 +557,6 @@
 .sc-sleep .sleep-area .sleep-wrap .desc-bottom{}
 .sc-sleep .link-more{
     display: inline-block;
-    /* margin-top: 60px; */
     padding: 20px 105px 18px 105px;
     background: #fff;
     background-color: #141617;
@@ -614,7 +601,6 @@
 }
 .sc-sleep .sleep-area2 .test-list .test-item{
     border-bottom: 1px solid #DDDDDD;
-    /* padding: 20px 0; */
 }
 .sc-sleep .sleep-area2 .test-list .btn-open{
     display: flex;
@@ -639,7 +625,6 @@
 }
 .sc-sleep .sleep-area2 .test-list .open svg{}
 .sc-sleep .sleep-area2 .test-list .test-info{
-    /* padding-top: 20px; */
     font-size: 14px;
     padding-bottom: 20px;
     display: none;
@@ -675,8 +660,6 @@
 }
 .adver-area .link-more{margin: 40px 0;}
 
-
-/* .sc-benefits{margin-top: 200px;margin-bottom: 200px;} */
 .sc-benefits .inner{
     columns: 2;
     column-gap: 48px;
@@ -706,7 +689,6 @@
 .sc-benefits .benefits-list{}
 .sc-benefits .benefits-item{}
 .sc-benefits .benefits-item:last-child{margin-top: 48px;    padding-bottom: 48px;}
-/* .sc-benefits .benefits-item:last-child .img-box{height: 722px;} */
 .sc-benefits .benefits-item a{
     position: relative;
     width: 100%;
@@ -740,7 +722,6 @@
     object-fit: cover;
     position: relative;
     width: 100%;
-    /* height: 100%; */
     max-height: 100%;
     aspect-ratio: auto 498 / 640;
     transition: transform 0.7s;
@@ -787,7 +768,6 @@
     line-height: 150%;
     letter-spacing: -0.025em;
     font-size: 30px;
-    /* margin: 0 auto; */
     margin-bottom: 48px;
     font-family: 'SangBleuSunrise';
 }
@@ -813,7 +793,6 @@
 
 
 @media screen and (max-width: 1200px) {
-    /* *1024을 기준으로 화면을 보고 잡아야함 */ 
     .sc-mainslide .slide-area .slide-img{object-fit: cover;}
     .sc-mainslide .slide-area .svg-box{
         max-width: 90%;
@@ -871,7 +850,6 @@
     .sc-marketing .marketing-desc{width: 374px;}
 }
 @media screen and (max-width: 1023px) {
-    /* *768을보고 잡아야함 */
     .top-ani{display: flex;}
     .top-ani .animate-list{animation-duration: 65.5s;}
     .sc-mainslide .slide-area .img-box{
@@ -976,7 +954,6 @@
     .sc-slide .slide-swiper{
         padding: 40px 0;
         height: 360px;
-        /* margin-bottom: 40px; */
     }
     .sc-slide .slide-swiper .swiper-slide p{
         margin-bottom: 40px;
@@ -1039,12 +1016,9 @@
 
 }
 @media screen and (max-width: 767px) {
-    /* *320을 보고 잡아야함 */
     .container{margin-left: 0;margin-top: 60px;}
     .sc-mainslide{background: #f8f7ed;}
     .sc-mainslide .story-info .info-top{font-size: 24px;}
-
-    /* .sc-mainslide .svg-box{display: none;} */
     
     .sc-mainslide .slide-area .svg-wrap{
         width: 100%;
@@ -1171,39 +1145,6 @@
         transition: opacity 0.8s;
     }
     .story-info{z-index: 0;}
-    /* .sc-slide .pagination-box{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    .sc-slide .pagination-box .swiper-list{
-        position: relative;
-        width: auto;
-        height: 25px;
-        right: 0;
-        top: -20px;
-    }
-    .sc-slide .pagination-box .swiper-item{
-        height: 25px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        
-        opacity: 0;
-    }
-    .sc-slide .pagination-box .swiper-item img{width: 100%;height: 100%;}
-    .sc-slide .pagination-box .swiper-item:nth-child(1){width: 82px;}
-    .sc-slide .pagination-box .swiper-item:nth-child(2){width: 56px;}
-    .sc-slide .pagination-box .swiper-item:nth-child(3){width: 107px;}
-    .sc-slide .pagination-box .swiper-item:nth-child(4){width: 136px;}
-    .sc-slide .pagination-box .swiper-item:nth-child(5){width: 202px;}
-    .sc-slide .swiper-slide-active .swiper-item{opacity: 1;}
-
-    .sc-slide .slide-swiper .swiper-slide-active{
-        opacity: 1;
-        transform: translateX(0);
-        transition: transform 0.8s cubic-bezier(0.65, 0, 0.55, 1) 0s, opacity 0.5s linear 0s;
-    } */
 
     .sc-sleep .sleep-area .sleep-box .img-box{height: 467px;}
     .sc-sleep .common-inner{padding: 0;}

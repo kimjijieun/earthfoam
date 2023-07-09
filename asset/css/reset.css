@@ -24,7 +24,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -35,14 +34,6 @@ body {
 ol, ul {
 	list-style: none;
 }
-/* blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-} */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -63,7 +54,6 @@ input {
     padding: 0;
     background: transparent;
     border: 0;
-    /* font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-serif; */
 }
 input:focus {
     outline: none;
@@ -81,10 +71,9 @@ select {
     border: 0;
     outline: none;
     appearance: none;
-    -moz-appearance: none; /* Firefox */ 
-    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none;
+    -webkit-appearance: none; 
 }
-/* IE 기본 스타일 제거 */
 select::-ms-expand{
-	display: none; /* IE 10, 11 */
+	display: none;
 }

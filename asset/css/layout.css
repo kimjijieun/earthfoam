@@ -20,7 +20,6 @@
     background-color: #141617;
     width: auto;
     height: 100%;
-    /* transform: translateX(575px); */
     transform: translateX(0);
     transition: transform 750ms cubic-bezier(0.22, 1, 0.36, 1), filter 750ms linear;    transition: transform 750ms cubic-bezier(0.22, 1, 0.36, 1), filter 750ms linear;
 }
@@ -56,7 +55,6 @@
 .header .menu-wrap .btn-menu line:nth-child(2){transform: translateY(8px) rotate(45deg);}
 .header .menu-wrap .btn-menu line:nth-child(3){transform: translateY(-8px) rotate(-45deg);}
 
-/* 제이쿼리 */
 .header .menu-wrap .btn-menu.active line{}
 .header .menu-wrap .btn-menu.active line:nth-child(1){opacity: 0;}
 .header .menu-wrap .btn-menu.active line:nth-child(2){transform: rotate(0);}
@@ -104,7 +102,6 @@
 .header .menu-side .menu-list .menu-item a{
     width: 100%;
     display: block;
-    /* color: #EA805C; */
     letter-spacing: -0.01em;
 }
 .header .menu-side .menu-list .menu-item:hover{
@@ -140,7 +137,6 @@
     transition: transform 750ms cubic-bezier(0.22, 1, 0.36, 1), filter 750ms linear;
     transform: translateX(575px);
     pointer-events: none;
-    /* padding-left: 80px; */
 }
 .footer .animate{
     border-bottom: 1px solid #3A3A3A;
@@ -152,7 +148,6 @@
 .footer .animate .animate-list{color: #fff;    animation-duration: 35.5s;}
 .footer .inner2{
     padding: 40px 20px;
-    /* margin: 0 50px; */
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     column-gap: 20px;
@@ -160,8 +155,6 @@
 
 .footer .footer-wrap{
     display: grid;
-    /* grid-template-columns: repeat(24, 1fr); */
-    /* column-gap: 20px; */
     grid-template-columns: 4fr 1fr;
     grid-template-rows: auto;
     grid-column-gap: 32px;
@@ -199,11 +192,9 @@
 .footer .footer-wrap .search-area .search-box .ic-search{
     padding: 12px;
     color: #fff;
-    /* line-height: 39px; */
     width: 100%;
     height: 100%;
     display: flex;
-    /* display: inline-block; */
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
@@ -230,7 +221,6 @@
     line-height: 20px;
 }
 
-/* .footer .footer-bottom{display: flex;} */
 .footer .footer-wrap .link-area{
     font-size: 14px;
     display: flex;
@@ -244,8 +234,6 @@
 .footer .footer-wrap .footer-animate{
     overflow: hidden;
     position: relative;
-    /* width: 280px;
-    height: 50px; */
 }
 .footer .footer-wrap .footer-animate .animate-txt:first-child{
     letter-spacing: 0.1em;
@@ -332,7 +320,6 @@
 
 
 @media screen and (max-width: 1200px) {
-    /* *1024을 기준으로 화면을 보고 잡아야함 */ 
     .footer .footer-top .sns-area{width: 163px;}
     .footer .footer-bottom .link-area{width: 625px;}
     .footer .footer-bottom .footer-animate{
@@ -341,7 +328,6 @@
     }
 }
 @media screen and (max-width: 1023px) {
-    /* *768을보고 잡아야함 */
     .footer .footer-wrap{
         grid-column-start: 2;
         grid-column-end: span 22;
@@ -367,7 +353,6 @@
         grid-area: link;
         font-size: 16px;
         line-height: 150%;
-        /* columns: 2; */
         display: grid;
         grid-row-gap: 10px;
         grid-column-gap: 20px;
@@ -381,7 +366,6 @@
     .footer .footer-wrap .footer-animate .animate-txt::after{height: 120%;}
 }
 @media screen and (max-width: 767px) {
-    /* *320을 보고 잡아야함 */
 
     .dimmed{
         display: block;
@@ -427,7 +411,6 @@
 
     .header .menu-area{
         box-sizing: border-box;
-        /* width: 320px; */
         height: 60px;
     }
     .header .menu-side{

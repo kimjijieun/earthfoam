@@ -33,7 +33,6 @@ body.hidden{overflow: hidden;}
     background-color: #141617;
     color: #fff;
 }
-/* section{margin-left: 80px;} */
 
 .cursor{
     font-size: 11px;
@@ -58,16 +57,11 @@ body.hidden{overflow: hidden;}
     vertical-align: middle;
 }
 
-@media screen and (max-width: 1200px) {
-    /* *1024을 기준으로 화면을 보고 잡아야함 */ 
-
-}
+@media screen and (max-width: 1200px) {}
 @media screen and (max-width: 1023px) {
-    /* *768을보고 잡아야함 */
     .margin{margin: 100px 0;}
 }
 @media screen and (max-width: 767px) {
-    /* *320을 보고 잡아야함 */
     .margin{margin: 60px 0;}
     .common-inner{padding: 0 20px;}
     .footer{margin-left: 0;}

@@ -1,7 +1,4 @@
 $(function(){
-
-// 메인슬라이드
-
     var mainSlide = new Swiper(".sc-mainslide", {
         effect:'fade',
         speed : 1000,
@@ -41,15 +38,11 @@ $(function(){
 
 
 
-
-
-    // btn-menu
-
     $('.btn-menu').click(function(){
         $('.btn-menu, .header .menu-area, .container, .footer').toggleClass('active');
 
         $(window).resize(function(){ 
-            if (window.innerWidth < 767) {  // 다바이스 크기가 480이상일때 
+            if (window.innerWidth < 767) {
                 
                 if ($('.btn-menu').hasClass('active') ) {
                     $('.header .menu-area, .container').removeClass('active');
@@ -65,7 +58,7 @@ $(function(){
         $('body').toggleClass('hidden');
     })
 
-    // btn-more
+
 
     $('.info-menu').hover(function(){
         $('.sc-story .info-box').addClass('open');
@@ -73,10 +66,9 @@ $(function(){
         $('.sc-story .info-box').removeClass('open');
     })
     
-    // more버튼 바뀌기
+
     $(window).scroll(function(){
         curr = $(this).scrollTop();
-        // storyHeight = $('.sc-story').outerHeight();
         storyHeight = $('.sc-story').offset().top;
 
         if (curr > storyHeight ) {
@@ -86,7 +78,7 @@ $(function(){
         }
 
         $(window).resize(function(){ 
-            if (window.innerWidth < 1023) {  // 다바이스 크기가 480이상일때 
+            if (window.innerWidth < 1023) {
             
             if (curr > storyHeight ) {
                 $('.sc-story .info-box, .btn-more').addClass('show');
@@ -109,7 +101,6 @@ $(function(){
                 trigger: up,
                 start: 'top+=30% 70%',
                 end: 'bottom top',
-                // markers: true,
             },
         })
     })
@@ -123,7 +114,6 @@ $(function(){
             start: 'top 70%',
             end: 'bottom top',
             stagger:0.1,
-            // markers: true,
         },
     })
 
@@ -136,14 +126,12 @@ $(function(){
             start: 'top bottom',
             end: 'bottom top',
             stagger:0.1,
-            // markers: true,
         },
     })
 
 
 
 
-    // sc-slide
     var slide2 = new Swiper('.sc-slide .slide-swiper', {
         pagination: {
           el: ".swiper-pagination",
@@ -156,13 +144,12 @@ $(function(){
         loop: true,
 
     });
-    // 호버
+
     $('.swiper-pagination-bullet').hover(function() {
         slide2.slideToLoop($(this).index());
      });
 
 
-    //.sc-sleep .btn
     $('.btn-open').click(function(){
         $(this).children('.btn-open .open').toggleClass('active')
 
@@ -189,12 +176,10 @@ $(function(){
     });
 
 
-    // 커서
 
     $('body').mousemove(function(e){
         xVal = e.clientX;
         yVal = e.clientY;
-// console.log(xVal+'//'+yVal);
         gsap.to('.cursor',{
             x:xVal,
             y:yVal
